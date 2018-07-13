@@ -222,10 +222,10 @@ endfunction
 //load all csv files from the current directory
 //and rewrite them into a single one without headers
 //one after an other
-all_data=load_csv_files("../../../../../data/video_synth/","all_data_generalized");
+all_data=load_csv_files("../../../../../../data/OpenCV/","all_data");
 
-//cols = [9];
+cols = [9];
 //cols = [10];
-cols = [11,12,13];
+//cols = [11,12,13];
 
-process_data(all_data,"../../../../../results/video_synth/result_remove_config/composite/","metrics_hist_composite_reduced",cols);
+process_data(all_data,"../../../../../../results/OpenCV/","metrics_hist_composite_reduced",cols);

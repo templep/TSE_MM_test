@@ -572,7 +572,7 @@ cols= [9];
 nb_col = prod(size(cols));
 
 ////uncomment a line to process desired column
-histograms = prepare_data("../../../../../data/video_synth/","all_data_generalized.csv",cols);
+histograms = prepare_data("../../../../../../data/OpenCV/","all_data.csv",cols);
 
 //histograms_recall = prepare_data("all_data_real.csv",cols);
 //histograms_prec = prepare_data("all_data_real.csv",cols);

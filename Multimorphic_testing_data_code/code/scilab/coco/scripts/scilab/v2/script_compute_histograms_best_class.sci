@@ -27,7 +27,7 @@ function x=load_csv_files(path,fileregex,idx_test,idx_prop)
     
     //lut between idx_test and label of the tests
     //all_data = all_obj_classes
-    all_data = csvRead("../../../../../data/coco/"+"all_data_dev_obj_class.csv",",",".","string");
+    all_data = csvRead("../../../../../../data/coco/"+"all_data_dev_obj_class.csv",",",".","string");
     all_data(find(all_data(:,1)=="[all]: [all]"),:) = [];
     unique_text_file = unique(all_data(:,1));
     
@@ -38,7 +38,7 @@ function x=load_csv_files(path,fileregex,idx_test,idx_prop)
         set_obj_class = [set_obj_class; part(set_label(i),1:strindex(set_label(i),': [all]')-1)];
     end
     
-    all_data = csvRead("../../../../../data/coco/"+"all_data_dev_reduced.csv",",",".","string");
+    all_data = csvRead("../../../../../../data/coco/"+"all_data_dev_reduced.csv",",",".","string");
     
     curr_i = [];
     curr_i = all_data(grep(all_data,set_obj_class),[1:idx_prop]);
@@ -138,13 +138,13 @@ endfunction
 
 
 //retrieve label of class
-s = load_best_set("../../../../../data/coco/best_sets/","best_set_5_dev_obj_class.txt",5);
+s = load_best_set("../../../../../../data/coco/best_sets/","best_set_5_dev_obj_class.txt",5);
 s_d = strtod(s); //index in double or integers
 
 index = [2];
-data=load_csv_files("../../../../../data/coco/Coco_Dev_2017/data/","*",s_d,index)
+data=load_csv_files("../../../../../../data/coco/Coco_Dev_2017/data/","*",s_d,index)
 data_d = strtod(data); //convert into double
 
-save_result(data,"../../../../../data/coco/","data_dev_class_best_obj_class.csv");
+save_result(data,"../../../../../../data/coco/","data_dev_class_best_obj_class.csv");
 
-process_data(data,"../../../../../results/coco/result_dispersion_score/","metrics_hist_Precision_AP_dev_2017_best_set_obj_class.csv",index);
+process_data(data,"../../../../../../results/coco/result_dispersion_score/","metrics_hist_Precision_AP_dev_2017_best_set_obj_class.csv",index);

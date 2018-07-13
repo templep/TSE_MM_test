@@ -172,16 +172,13 @@ index = [2];
 //load all csv files from the current directory
 //and rewrite them into a single one without headers
 //one after an other
-//all_data=load_csv_files("../../../../../data/coco/Coco_Dev_2017/data/","coco_*");
-//
-//all_data=load_csv_files("../../../../../data/coco/split/training/","coco_*");
-all_data=load_csv_files("../../../../../data/coco/split/test/","coco_*");
+all_data=load_csv_files("../../../../../../data/coco/retrieved_perf_from_leaderboard/","coco_*");
 
-save_result(all_data,"../../../../../results/coco/","all_data_dev_split_test.csv");
+save_result(all_data,"../../../../../../results/coco/","all_data_dev_2017.csv");
 
 //all_data=load_csv_files("../../../../../data/coco/","all_data_standard_reduced");
 //all_data=load_csv_files("../../../../../data/coco/","all_data_standard_obj_class");
 //all_data=load_csv_files("../../../../../data/coco/","all_data_dev_reduced");
 //all_data=load_csv_files("../../../../../data/coco/","all_data_dev_obj_class");
 
-//process_data(all_data,"../../../../../results/coco/result_dispersion_score/","metrics_hist_Precision_AP_dev_2017_split_training.csv",index);
+process_data(all_data,"../../../../../results/coco/result_dispersion_score/","metrics_hist_Precision_AP_dev_2017.csv",index);

@@ -177,9 +177,9 @@ index = [9];
 //and rewrite them into a single one without headers
 //one after an other
 
-all_data=load_csv_files("../../../../../results/video_synth/results_executions/","motiv_metrics_*");
+all_data=load_csv_files("../../../../../../data/OpenCV/execution_measures/","motiv_metrics_*");
 
-save_result(all_data,"../../../../../data/video_synth/","all_data.csv");
-//all_data= csvRead("../../../../../data/video_synth/all_data.csv",",",".","string");
+save_result(all_data,"../../../../../../data/OpenCV/","all_data.csv");
+//all_data= csvRead("../../../../../../data/video_synth/all_data.csv",",",".","string");
 
-process_data(all_data,"../../../../../results/video_synth/result_dispersion_score/","metrics_hist_precision.csv",index);
+process_data(all_data,"../../../../../../results/OpenCV/","metrics_hist_precision.csv",index);

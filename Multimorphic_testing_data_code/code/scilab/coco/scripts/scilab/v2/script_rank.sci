@@ -18,10 +18,10 @@ function x=load_csv_files(path,fileregex,idx_test,idx_prop,is_obj_class)
     //lut between idx_test and label of the tests
     all_data =[];
     if(is_obj_class)
-        all_data = csvRead("../../../../../data/coco/"+"all_data_dev_obj_class.csv",",",".","string");
+        all_data = csvRead("../../../../../../data/coco/"+"all_data_dev_obj_class.csv",",",".","string");
     else
         //all_data = csvRead("../../../../../data/coco/"+"all_data_dev.csv",",",".","string");
-        all_data = csvRead("../../../../../data/coco/"+"data_dev_class_best_obj_class.csv",",",".","string");
+        all_data = csvRead("../../../../../../data/coco/"+"data_dev_class_best_obj_class.csv",",",".","string");
     end
     all_data(find(all_data(:,1)=="[all]: [all]"),:) = [];
     unique_text_file = unique(all_data(:,1));
@@ -89,10 +89,10 @@ is_obj_class=%t;
 //retrieve test cases of interest (index)
 if(is_obj_class)
     //s = load_best_set("../../../../../data/coco/best_sets/","best_set_5_dev_obj_class.txt",5);
-    s = load_best_set("../../../../../results/coco/","best_5set_dev_training_obj_class.txt",5);
+    s = load_best_set("../../../../../../results/coco/","best_5set_dev_training_obj_class.txt",5);
 else
     //s = load_best_set("../../../../../data/coco/best_sets/","best_set_5_dev_reduced.txt",5);
-    s = load_best_set("../../../../../results/coco/","best_set_5dev_training_reduced.txt",5);
+    s = load_best_set("../../../../../../results/coco/","best_set_5dev_training_reduced.txt",5);
 end
 disp(s);
 s_d = strtod(s); //index in double or integers
@@ -119,7 +119,7 @@ data_mean_sort = gsort(data_mean,'g','d');
 
 //retrieve from list of files the correct ranking
 //files=listfiles("../../../../../data/coco/Coco_Dev_2017/data/*"+'.csv');
-files=listfiles("../../../../../data/coco/split/test/*"+'.csv');
+files=listfiles("../../../../../../data/coco/split/test/*"+'.csv');
 
 l_final=[];
 for i=1:prod(size(data_mean_sort))
@@ -136,4 +136,4 @@ else
     //filename="rank_reduced_best_obj_class.csv"
     filename="rank_reduced_best_obj_class_split_training.csv"
 end
-save_result(l_final,"../../../../../results/coco/",filename)
+save_result(l_final,"../../../../../../results/coco/",filename)

@@ -162,15 +162,17 @@ endfunction
 //index for memory
 //index = [2];
 //index for time
-//index = [3];
+index = [3];
 //index for composite
-index = [2,3];
+//index = [2,3];
 
 //load all csv files from the current directory
 //and rewrite them into a single one without headers
 //one after an other
-all_data=load_csv_files("../../../../../data/HAXE/formatted/","*");
+all_data=load_csv_files("../../../../../../data/HAXE/formatted/","*");
 
-save_result(all_data,"../../../../../data/HAXE/","all_data.csv");
+save_result(all_data,"../../../../../../data/HAXE/","all_data.csv");
 
-process_data(all_data,"../../../../../results/HAXE/result_dispersion_score/","metrics_hist_composite.csv",index);
+process_data(all_data,"../../../../../../results/HAXE/result_dispersion_score/","metrics_hist_time.csv",index);
+//process_data(all_data,"../../../../../../results/HAXE/result_dispersion_score/","metrics_hist_mem.csv",index);
+//process_data(all_data,"../../../../../../results/HAXE/result_dispersion_score/","metrics_hist_composite.csv",index);

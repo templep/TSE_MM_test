@@ -573,13 +573,8 @@ cols= [2];
 //number of observations
 nb_col = prod(size(cols));
 
-////uncomment a line to process desired column
-//histograms = prepare_data("../../../../../data/coco/","all_data_standard_reduced.csv",cols);
-//histograms = prepare_data("../../../../../data/coco/","all_data_standard_obj_class.csv",cols);
-//histograms = prepare_data("../../../../../data/coco/","all_data_dev_reduced.csv",cols);
-histograms = prepare_data("../../../../../data/coco/","all_data_dev_obj_class.csv",cols);
-//histograms = prepare_data("../../../../../data/coco/","all_data_dev_best_set.csv",cols)
-//histograms = prepare_data("../../../../../data/coco/","all_data_dev_split_training_obj_class.csv",cols)
+histograms = prepare_data("../../../../../../data/coco/","all_data_dev_2017.csv",cols);
+
 
 
 //histograms_recall = prepare_data("all_data_real.csv",cols);
@@ -590,9 +585,9 @@ histograms = prepare_data("../../../../../data/coco/","all_data_dev_obj_class.cs
 //[measure,i,j] = compose_2hist(histograms,nb_col);
 //[measure,i,j] = compose_2hist_best(histograms,nb_col);
 //[measure,i,j,k] = compose_3hist(histograms,nb_col);
-[measure,i,j,k] = compose_3hist_best(histograms,nb_col);
+//[measure,i,j,k] = compose_3hist_best(histograms,nb_col);
 //[measure,i,j,k,l,m] = compose_5hist(histograms,nb_col);
-//[measure,i,j,k,l,m] = compose_5hist_best(histograms,nb_col);
+[measure,i,j,k,l,m] = compose_5hist_best(histograms,nb_col);
 
 ////// uncomment to display what indexes have been returned from previous calls
 disp(i);
@@ -606,10 +601,7 @@ disp(measure);
 
 //data=[i;j;k;l;m;measure];
 data=[i;j;k;measure];
-//csvWrite(data,"../../../../../results/coco/best_5set_dev_reduced.txt");
-//csvWrite(data,"../../../../../results/coco/best_5set_dev_obj_class.txt");
-//csvWrite(data,"../../../../../results/coco/best_5set_dev_training_obj_class.txt");
-csvWrite(data,"../../../../../results/coco/best_3set_dev_obj_class.txt");
+csvWrite(data,"../../../../../../results/coco/best_5set.txt");
 
 //////other way to compute distance between different histograms
 //[dist,i,j] = distance(histograms);

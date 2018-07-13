@@ -15,5 +15,5 @@ end
 //names = from_idx_to_name("../../../../../results/coco/","best_5set_dev_reduced.txt","../../../../../data/coco/","all_data_dev_reduced.csv");
 //names = from_idx_to_name("../../../../../results/coco/","best_5set_dev_training_obj_class.txt","../../../../../data/coco/","all_data_dev_split_training_obj_class.csv");
 //names = from_idx_to_name("../../../../../results/coco/","best_5set_dev_obj_class.txt","../../../../../data/coco/","all_data_dev_obj_class.csv");
-names = from_idx_to_name("../../../../../results/coco/","best_3set_dev_obj_class.txt","../../../../../data/coco/","all_data_dev_obj_class.csv");
+names = from_idx_to_name("../../../../../results/coco/","best_5set.txt","../../../../../data/coco/","all_data_dev_obj_class.csv");
 disp(names);

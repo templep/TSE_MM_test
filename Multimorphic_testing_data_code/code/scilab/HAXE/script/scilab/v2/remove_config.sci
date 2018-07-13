@@ -214,10 +214,10 @@ endfunction
 //load all csv files from the current directory
 //and rewrite them into a single one without headers
 //one after an other
-all_data=load_csv_files("../../../../../data/HAXE/formatted/","*_observations");
+all_data=load_csv_files("../../../../../../data/HAXE/formatted/","*");
 
 //cols = [2];
-//cols = [3];
-cols = [2,3];
+cols = [3];
+//cols = [2,3];
 
-process_data(all_data,"../../../../../results/HAXE/result_remove_config/","metrics_hist_composite_reduced2",cols);
+process_data(all_data,"../../../../../../results/HAXE/result_remove_config/","metrics_hist_composite_reduced2",cols);

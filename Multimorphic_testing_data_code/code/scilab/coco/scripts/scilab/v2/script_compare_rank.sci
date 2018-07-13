@@ -48,9 +48,9 @@ endfunction
 
 
 idx_col=[2];
-rebuilt_rank = load_rank("../../../../../results/coco/","rank_reconstructed_from_training_and_test.csv",idx_col);
+rebuilt_rank = load_rank("../../../../../../results/coco/","ranking_reconstructed.csv",idx_col);
 
-initial_rank = load_rank("../../../../../data/coco/Coco_Dev_2017/final_ranking/","coco_all_average_dev_bbox_format.csv",idx_col);
+initial_rank = load_rank("../../../../../../results/coco/","original_ranking.csv",idx_col);
 
 initial_rank(1,:) = [];
 

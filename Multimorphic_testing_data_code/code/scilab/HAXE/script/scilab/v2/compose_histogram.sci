@@ -564,14 +564,14 @@ function [best_measure,best_i,best_j,best_k,best_l,best_m] = compose_5hist_best(
 endfunction
 
 //observations of interest
-cols= [2];
-//cols= [3];
+//cols= [2];
+cols= [3];
 //cols= [2,3];
 //number of observations
 nb_col = prod(size(cols));
 
 ////uncomment a line to process desired column
-histograms = prepare_data("../../../../../data/HAXE/","all_data.csv",cols);
+histograms = prepare_data("../../../../../../data/HAXE/","all_data.csv",cols);
 
 //histograms_recall = prepare_data("all_data_real.csv",cols);
 //histograms_prec = prepare_data("all_data_real.csv",cols);
