@@ -1,0 +1,6 @@
+./test/videos_config/MOTIV_GT_Char_00000002.avi
+./test/videos_config/MOTIV_GT_Char_00000004.avi
+./test/videos_config/MOTIV_GT_Char_00000038.avi
+./test/videos_config/MOTIV_GT_Char_00000039.avi
+./test/videos_config/MOTIV_GT_Char_00000040.avi
+

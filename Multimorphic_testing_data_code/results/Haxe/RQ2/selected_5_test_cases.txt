@@ -1,0 +1,7 @@
+color ts19
+color ts6
+core ts4
+core ts40
+core ts41
+
+measure : 6/21 = 0.286
