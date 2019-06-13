@@ -563,6 +563,23 @@ function [best_measure,best_i,best_j,best_k,best_l,best_m] = compose_5hist_best(
     end
 endfunction
 
+
+function measure = compose_all(histograms,nb_cols)
+    measure = 0;
+    v=[];
+    for i = 1 : size(histograms,1)
+        hist1 = csvTextScan(histograms(i),' ','.','double');
+        hist1 = matrix(hist1,nb_cols,-1);
+        hist1T = hist1';
+        [v1,v2]=find(hist1T~=0);
+        v=[v;unique(v1)'];
+    end
+    measure = size(unique(v),1);
+    nb_bins = max([size(hist1,2)]);
+    disp(nb_bins);
+    measure = measure/nb_bins;
+endfunction
+
 //observations of interest
 //cols= [2];
 cols= [3];
@@ -584,6 +601,8 @@ histograms = prepare_data("../../../../../../data/HAXE/","all_data.csv",cols);
 //[measure,i,j,k] = compose_3hist_best(histograms,nb_col);
 //[measure,i,j,k,l,m] = compose_5hist(histograms,nb_col);
 [measure,i,j,k,l,m] = compose_5hist_best(histograms,nb_col);
+
+//measure = compose_all(histograms,nb_col);
 
 ////// uncomment to display what indexes have been returned from previous calls
 disp(i);

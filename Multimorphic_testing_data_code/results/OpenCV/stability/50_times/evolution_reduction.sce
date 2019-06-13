@@ -43,7 +43,8 @@ function [a,b] = display(m,legs,colors,pos)
     //plot2d(x,[strtod(y) strtod(mi) strtod(ma)],[1,2,3], leg="average@minimum values@maximumvalues", rect = [0,0,100,1]);
     //plot2d(x,strtod(mi),1, leg="minimum values", rect = [0,0,120,1]);
     //plot2d(x,strtod(ma),1, leg="maximum values", rect = [0,0,120,1]);
-    plot2d(x,[strtod(ma) strtod(y) strtod(mi) ],colors, rect = [0,0,100,1.0]);
+    plot2d(x,[strtod(ma) strtod(y) strtod(mi) ],colors, rect = [0,0,size(x,2),1.0]);
+    //plot2d(x,[strtod(y)],colors, rect = [0,0,100,1.0]);
     //legends(legs,colors)
 //    e=gce();
 //    hl=legend(legs,pos);
@@ -117,6 +118,7 @@ save_result(res,"./res_stat/res_stat_vid_"+index+".csv");
 
 e=gce();
 h=legend(['maximum top','average top','minimum top','maximum bottom','average bottom','minimum bottom'],"by_coordinates")
+//h=legend(['average top','average bottom'],"by_coordinates")
 
 disp(a);
 disp(b);
